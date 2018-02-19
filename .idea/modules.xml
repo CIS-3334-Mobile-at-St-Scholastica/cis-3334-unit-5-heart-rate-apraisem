@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/HeartRateTracker-PartStart-2018.iml" filepath="$PROJECT_DIR$/HeartRateTracker-PartStart-2018.iml" />
+      <module fileurl="file://C:\Users\Ashley\AndroidStudioProjects\cis-3334-unit-5-heart-rate-apraisem\HeartRateTracker-PartStart-2018.iml" filepath="C:\Users\Ashley\AndroidStudioProjects\cis-3334-unit-5-heart-rate-apraisem\HeartRateTracker-PartStart-2018.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://C:\Users\Ashley\AndroidStudioProjects\cis-3334-unit-5-heart-rate-apraisem\app\app.iml" filepath="C:\Users\Ashley\AndroidStudioProjects\cis-3334-unit-5-heart-rate-apraisem\app\app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cis-3334-unit-5-heart-rate-apraisem.iml" filepath="$PROJECT_DIR$/cis-3334-unit-5-heart-rate-apraisem.iml" />
     </modules>
   </component>
 </project>
