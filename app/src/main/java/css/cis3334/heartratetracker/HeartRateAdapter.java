@@ -2,11 +2,14 @@ package css.cis3334.heartratetracker;
 
 import android.app.Activity;
 import android.content.Context;
+import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
+
+import java.awt.font.NumericShaper;
 
 /**
  * Created by Ashley on 2/18/2018.
@@ -47,8 +50,36 @@ public class HeartRateAdapter extends ArrayAdapter<HeartRate> {
         //get the heart rate we are displaying
         HeartRate hr = hrList.getHeartRate(position);
 
+
         TextView tvPulse=(TextView)view.findViewById(R.id.textViewPulse);
         tvPulse.setText(hr.getPulse().toString());
+
+        if (position <= .5){ //Add if/else statements to assign the Pulse text color according to the range of the heart rate
+            tvPulse.setTextColor(ContextCompat.getColor(context, R.color.colorZone1));
+        }
+        else if (position > .5 && position <= .6){
+            tvPulse.setTextColor(ContextCompat.getColor(context, R.color.colorZone2));
+        }
+        else if (position > .6 && position <= .7){
+            tvPulse.setTextColor(ContextCompat.getColor(context, R.color.colorZone3));
+        }
+        else if (position > .7 && position <= .8){
+            tvPulse.setTextColor(ContextCompat.getColor(context, R.color.colorZone4));
+        }
+        else if (position > .8 && position <= .9){
+            tvPulse.setTextColor(ContextCompat.getColor(context, R.color.colorZone5));
+        }
+        else if (position > .9 && position <= 1.0){
+            tvPulse.setTextColor(ContextCompat.getColor(context, R.color.colorZone6));
+        }
+
+        TextView tvRangeName=(TextView)view.findViewById(R.id.textViewRangeName); //Adding the Range Name to the view
+        tvRangeName.setText(hr.getRange().toString());
+
+        TextView tvRangeDescription=(TextView)view.findViewById(R.id.textViewRangeDescription); //Adding the Range Description to the view
+        tvRangeDescription.setText(hr.getRangeDescrtiption().toString());
+
+
 
         return(view);
     }
